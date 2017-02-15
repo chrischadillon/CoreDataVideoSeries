@@ -17,6 +17,8 @@ class TableViewController: UITableViewController {
         }
     }
     
+    var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
