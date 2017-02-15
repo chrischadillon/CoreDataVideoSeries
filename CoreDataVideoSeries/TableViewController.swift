@@ -21,6 +21,21 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadPeopleFromCoreData()
+    }
+    
+    func loadPeopleFromCoreData() {
+        let theFetchRequest:NSFetchRequest<PersonEntity> = PersonEntity.fetchRequest()
+        
+        do {
+            for aPersonEntity in try self.managedObjectContext.fetch(theFetchRequest) {
+                let aPerson = Person(firstName: aPersonEntity.first_name!, lastName: aPersonEntity.last_name!)
+                self.thePersonList.append(aPerson)
+            }
+        } catch {
+            print("Error loading data from Core Data - \(error.localizedDescription)")
+        }
     }
 
     @IBAction func doAdd(_ sender: Any) {
