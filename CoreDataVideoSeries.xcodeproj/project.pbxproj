@@ -13,6 +13,7 @@
 		3F97BF361E54F34000E268EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F97BF341E54F34000E268EC /* LaunchScreen.storyboard */; };
 		3F97BF3E1E54F37900E268EC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97BF3D1E54F37900E268EC /* TableViewController.swift */; };
 		3F97BF401E54F3CF00E268EC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97BF3F1E54F3CF00E268EC /* Person.swift */; };
+		832AA6ED1E550EDE00DC9432 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 832AA6EB1E550EDE00DC9432 /* Person.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3F97BF371E54F34000E268EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F97BF3D1E54F37900E268EC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3F97BF3F1E54F3CF00E268EC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		832AA6EC1E550EDE00DC9432 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				3F97BF2F1E54F34000E268EC /* Main.storyboard */,
 				3F97BF3F1E54F3CF00E268EC /* Person.swift */,
 				3F97BF3D1E54F37900E268EC /* TableViewController.swift */,
+				832AA6EB1E550EDE00DC9432 /* Person.xcdatamodeld */,
 				3F97BF321E54F34000E268EC /* Assets.xcassets */,
 				3F97BF341E54F34000E268EC /* LaunchScreen.storyboard */,
 				3F97BF371E54F34000E268EC /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				3F97BF3E1E54F37900E268EC /* TableViewController.swift in Sources */,
 				3F97BF401E54F3CF00E268EC /* Person.swift in Sources */,
+				832AA6ED1E550EDE00DC9432 /* Person.xcdatamodeld in Sources */,
 				3F97BF2C1E54F34000E268EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		832AA6EB1E550EDE00DC9432 /* Person.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				832AA6EC1E550EDE00DC9432 /* Person.xcdatamodel */,
+			);
+			currentVersion = 832AA6EC1E550EDE00DC9432 /* Person.xcdatamodel */;
+			path = Person.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3F97BF201E54F34000E268EC /* Project object */;
 }
