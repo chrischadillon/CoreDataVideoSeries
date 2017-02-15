@@ -33,6 +33,18 @@ class TableViewController: UITableViewController {
             let theLastName = theAlert.textFields?.last?.text
             
             self.thePersonList.append(Person(firstName: theFirstName!, lastName: theLastName!))
+            
+            let thePersonEntity = PersonEntity(context: self.managedObjectContext)
+            
+            thePersonEntity.first_name = theFirstName
+            thePersonEntity.last_name = theLastName
+            
+            do {
+                try self.managedObjectContext.save()
+            }
+            catch {
+                print("Error save to Core Data - \(error.localizedDescription)")
+            }
 
             }
         )
