@@ -50,7 +50,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = self.thePersonList[indexPath.row].firstName
+        cell.textLabel?.text = self.thePersonList[indexPath.row].lastName
         cell.detailTextLabel?.text = self.thePersonList[indexPath.row].firstName
         
         return cell
