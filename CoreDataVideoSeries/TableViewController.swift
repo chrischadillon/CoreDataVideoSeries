@@ -19,6 +19,15 @@ class TableViewController: UITableViewController, PersonUpdatable {
     
     func updateAPerson(thePerson:Person, index:Int) {
         self.thePersonList[index] = thePerson
+        
+        self.thePersonList[index].theNSManagedObject.first_name = thePerson.firstName
+        self.thePersonList[index].theNSManagedObject.last_name = thePerson.lastName
+        
+        do {
+            try self.managedObjectContext.save()
+        } catch {
+            print("Could not save the edit... Error = \(error.localizedDescription)")
+        }
     }
     
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -41,6 +50,20 @@ class TableViewController: UITableViewController, PersonUpdatable {
             print("Error loading data from Core Data - \(error.localizedDescription)")
         }
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                self.managedObjectContext.delete(self.thePersonList[indexPath.row].theNSManagedObject)
+                try self.managedObjectContext.save()
+            } catch {
+                print("Could not delete... Error = \(error.localizedDescription)")
+            }
+            
+            self.thePersonList.remove(at: indexPath.row)
+        }
+    }
+    
 
     @IBAction func doAdd(_ sender: Any) {
         let theAlert = UIAlertController(title: "Add Person", message: "Please enter...", preferredStyle: .alert)
