@@ -67,7 +67,6 @@
         <!--View Controller-->
         <scene sceneID="zM5-2s-qha">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LzS-2V-pDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mig-Eb-ndT" customClass="ViewController" customModule="CoreDataVideoSeries" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5PF-IZ-K3Z"/>
@@ -80,10 +79,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-Qj-iZa">
                                 <rect key="frame" x="16" y="617" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="doCancel:" destination="mig-Eb-ndT" eventType="touchUpInside" id="P79-ae-LCk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-6D-Zis">
                                 <rect key="frame" x="329" y="617" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="doAdd:" destination="mig-Eb-ndT" eventType="touchUpInside" id="bhK-Lb-AFO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buH-C6-1CH">
                                 <rect key="frame" x="16" y="20" width="343" height="29"/>
@@ -139,7 +144,12 @@
                             <constraint firstAttribute="leadingMargin" secondItem="9aC-Dl-uVW" secondAttribute="leading" id="yUq-JW-G8a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameText" destination="9aC-Dl-uVW" id="RYz-nt-hfj"/>
+                        <outlet property="lastNameText" destination="OK2-c1-WcH" id="E6S-JB-NV4"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LzS-2V-pDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.8" y="127.28635682158921"/>
         </scene>

@@ -14,6 +14,7 @@
 		3F97BF3E1E54F37900E268EC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97BF3D1E54F37900E268EC /* TableViewController.swift */; };
 		3F97BF401E54F3CF00E268EC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97BF3F1E54F3CF00E268EC /* Person.swift */; };
 		832AA6ED1E550EDE00DC9432 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 832AA6EB1E550EDE00DC9432 /* Person.xcdatamodeld */; };
+		83931BDF1E5B633100C67C66 /* PersonUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83931BDE1E5B633100C67C66 /* PersonUpdatable.swift */; };
 		839403DE1E5A3C5300EC5D15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839403DD1E5A3C5300EC5D15 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3F97BF3D1E54F37900E268EC /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3F97BF3F1E54F3CF00E268EC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		832AA6EC1E550EDE00DC9432 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		83931BDE1E5B633100C67C66 /* PersonUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUpdatable.swift; sourceTree = "<group>"; };
 		839403DD1E5A3C5300EC5D15 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				3F97BF2B1E54F34000E268EC /* AppDelegate.swift */,
 				3F97BF2F1E54F34000E268EC /* Main.storyboard */,
+				83931BDE1E5B633100C67C66 /* PersonUpdatable.swift */,
 				3F97BF3F1E54F3CF00E268EC /* Person.swift */,
 				839403DD1E5A3C5300EC5D15 /* ViewController.swift */,
 				3F97BF3D1E54F37900E268EC /* TableViewController.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				839403DE1E5A3C5300EC5D15 /* ViewController.swift in Sources */,
+				83931BDF1E5B633100C67C66 /* PersonUpdatable.swift in Sources */,
 				3F97BF3E1E54F37900E268EC /* TableViewController.swift in Sources */,
 				3F97BF401E54F3CF00E268EC /* Person.swift in Sources */,
 				832AA6ED1E550EDE00DC9432 /* Person.xcdatamodeld in Sources */,

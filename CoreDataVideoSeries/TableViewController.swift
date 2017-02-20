@@ -9,12 +9,16 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, PersonUpdatable {
 
     var thePersonList = [Person]() {
         didSet {
             self.tableView.reloadData()
         }
+    }
+    
+    func updateAPerson(thePerson:Person, index:Int) {
+        self.thePersonList[index] = thePerson
     }
     
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -84,6 +88,15 @@ class TableViewController: UITableViewController {
         cell.detailTextLabel?.text = self.thePersonList[indexPath.row].firstName
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! ViewController
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            nextVC.thePerson = self.thePersonList[indexPath.row]
+            nextVC.theIndex = indexPath.row
+            nextVC.personUpdatableObject=self
+        }
     }
 
 }
