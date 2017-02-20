@@ -34,7 +34,7 @@ class TableViewController: UITableViewController, PersonUpdatable {
         
         do {
             for aPersonEntity in try self.managedObjectContext.fetch(theFetchRequest) {
-                let aPerson = Person(firstName: aPersonEntity.first_name!, lastName: aPersonEntity.last_name!)
+                let aPerson = Person(firstName: aPersonEntity.first_name!, lastName: aPersonEntity.last_name!, theNSManagedObject: aPersonEntity)
                 self.thePersonList.append(aPerson)
             }
         } catch {
@@ -51,12 +51,11 @@ class TableViewController: UITableViewController, PersonUpdatable {
             let theFirstName = theAlert.textFields?.first?.text
             let theLastName = theAlert.textFields?.last?.text
             
-            self.thePersonList.append(Person(firstName: theFirstName!, lastName: theLastName!))
-            
             let thePersonEntity = PersonEntity(context: self.managedObjectContext)
-            
             thePersonEntity.first_name = theFirstName
             thePersonEntity.last_name = theLastName
+            
+            self.thePersonList.append(Person(firstName: theFirstName!, lastName: theLastName!, theNSManagedObject: thePersonEntity))
             
             do {
                 try self.managedObjectContext.save()

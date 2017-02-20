@@ -1,0 +1,34 @@
+Deleting and Editing CoreData NSManaged Objects
+
+3 Ways to Work With Existing NS Managed Objects
+
+1) Use only the NS Managed Objects that CoreData builds. This
+makes working with CoreData very easy, but, makes it hard to
+add our own custom behaviours since we would jave to add new
+functionality to the NS Managed Objects.
+
+Pros - Very easy to work with CoreData.  Good choice for saving
+and retireving simple data with not much functinality
+Cons - App is very tightly tied to CoreData (it would be hard
+to change the back-end data store)
+
+2) Make our own Objects and also make similar NS Managed Objects
+in CoreData. In our own Objects, we can store a reference
+to the corrosponding NS Managed Object.  This we way we have full
+control over our Objects and their behaviour, and have easy access
+to the NS Managed Objects
+
+Pros - Easily added functionality to the our classes and have
+access to CoreData NS Managed Objects.
+Cons - We are still somewhat tied to a CoreData back-end, but less
+so compared to option 1
+
+3) Make our own Object like number 2, but never store the
+corresponding NS Managed Object.  Whenever we need to edit or
+delete, we would first fetch the corresponding NS Managed Object
+then delete or edit it in CoreData.
+
+Pros - We are not tied to Core Data at all, we can change the
+back-end data store with minimal changes to our classes.
+Cons - We need to do more fetching to lookup NS Managed Objects
+as we need them for deletes and edits

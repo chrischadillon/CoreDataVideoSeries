@@ -11,9 +11,11 @@ import Foundation
 class Person {
     var firstName:String
     var lastName:String
+    var theNSManagedObject:PersonEntity
     
-    init(firstName:String, lastName:String) {
+    init(firstName:String, lastName:String, theNSManagedObject:PersonEntity) {
         self.firstName = firstName
         self.lastName = lastName
+        self.theNSManagedObject = theNSManagedObject
     }
 }
